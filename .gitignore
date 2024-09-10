@@ -1,0 +1,5 @@
+data_reduce/
+data/data_main_orig.rds
+data/data_owners_orig.rds
+data/ll_df.rds
+data/measures.xlsx
