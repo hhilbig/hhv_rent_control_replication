@@ -25,7 +25,7 @@ All files are in the source_* folders. The main results, which are used in multi
 
 The file source_results/functions.R contains all the helper functions used in the analyses and for plots / tables.
 
-## Omitted tables / figures
+## 3 Omitted tables / figures
 
 We omit two tables and figures from the replication archive. Both are used for auxillary evidence -- all main results can be replicated using the code and data provided.
 
@@ -33,6 +33,6 @@ We omit two tables and figures from the replication archive. Both are used for a
 
 - **Figure A.8** (histogram of apartment construction years): this figure uses data on all apartments that we fielded the survey to, which in turn is based on proprietary real estate ad data. Since we cannot share this data, we do not include this figure in the replication archive.
 
-## 3 Data Sources
+## 4  Data Sources
 
 Please refer to the paper for information on the data sources and how the data was compiled. For any questions, please contact <hhilbig@ucdavis.edu>
