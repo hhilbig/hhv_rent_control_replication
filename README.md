@@ -1,4 +1,4 @@
-# Replication Data & Code for ""
+# Replication Data & Code for "Does Rent Control Turn Tenants Into NIMBYs?"
 
 Sep 10 2024
 
@@ -14,15 +14,24 @@ The replication code is organized with data files located in a "data/..." folder
 
 #### 2.1 Data
 
-- data_main.rds: Main data file (survey responses from tenants)
-- data_main_owners.rds: Survey responses from owners, used for auxilliary analysis
-- covar_labels.xlsx: Labels for the covariates
+- **data_main.rds:** Main data file (survey responses from tenants)
+- **data_main_owners.rds:** Survey responses from owners, used for auxilliary analysis
+- **covar_labels.xlsx:** Labels for the covariates
+- **nexis_date_df.rds:** Nexis newspaper coverage data
 
 #### 2.2 Code
 
 All files are in the source_* folders. The main results, which are used in multiple plots / tables, are created in source_results/main_res.R. The results are then saved in saved_results/rd_res.rds and saved_results/rk_res.rds. These files are then used in the other .R files to create the rest of the results and figures.
 
 The file source_results/functions.R contains all the helper functions used in the analyses and for plots / tables.
+
+## Omitted tables / figures
+
+We omit two tables and figures from the replication archive. Both are used for auxillary evidence -- all main results can be replicated using the code and data provided.
+
+- **Table A.8** (restricting comparisons to physically close observations): this table is a robustness check that uses data on the exact location (based on addresses) of respondents. We cannot share the longitude / latitude of responses, therefore we do not include data and code to create this table.
+
+- **Figure A.8** (histogram of apartment construction years): this figure uses data on all apartments that we fielded the survey to, which in turn is based on proprietary real estate ad data. Since we cannot share this data, we do not include this figure in the replication archive.
 
 ## 3 Data Sources
 
