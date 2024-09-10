@@ -3,3 +3,4 @@ data/data_main_orig.rds
 data/data_owners_orig.rds
 data/ll_df.rds
 data/measures.xlsx
+.DS_Store
