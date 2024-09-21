@@ -1,6 +1,6 @@
 # Replication Data & Code for "Does Rent Control Turn Tenants Into NIMBYs?"
 
-Sep 10, 2024
+Sep 21, 2024
 
 **Authors:** Hanno Hilbig, Robert Vief, Anselm Hager
 
@@ -18,6 +18,8 @@ The replication code is organized with data files located in a `data/...` folder
 - **data_main_owners.rds:** Survey responses from owners, used for auxiliary analysis
 - **covar_labels.xlsx:** Labels for the covariates
 - **nexis_date_df.rds:** Nexis newspaper coverage data
+- **rentalunits_renters_new.xlsx:** Rental market data across cities
+- **civey_survey.xlsx:** Survey data for figure A.1
 
 #### 2.2. Code
 
@@ -28,6 +30,8 @@ The file `source_results/functions.R` contains all the helper functions used in 
 ## 3. Omitted Tables/Figures
 
 We omit two tables and figures from the replication archive. Both are used for auxiliary evidence -- all main results can be replicated using the code and data provided.
+
+- **Figure 18** This figure was produced in ArcMap, i.e. there is no code to produce it.
 
 - **Table A.8** (restricting comparisons to physically close observations): this table is a robustness check that uses data on the exact location (based on addresses) of respondents. We cannot share the longitude/latitude of responses, therefore we do not include data and code to create this table.
 

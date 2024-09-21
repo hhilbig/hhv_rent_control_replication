@@ -1,7 +1,59 @@
+# History files
+**/.Rhistory
+**/.Rapp.history
+
+# Session Data files
+**/.RData
+**/.RDataTmp
+
+# User-specific files
+**/.Ruserdata
+
+# Example code in package build process
+**/*-Ex.R
+
+# Output files from R CMD build
+**/*.tar.gz
+
+# Output files from R CMD check
+**/.Rcheck/
+
+# RStudio files
+**/.Rproj.user/
+**/*.Rproj
+**/.Rhistory
+**/.Rapp.history
+
+# Compiled code
+**/*.o
+**/*.so
+**/*.dll
+
+# Packages
+**/.RData
+**/.RDataTmp
+**/*.RDS
+**/*.Rproj
+**/.DS_Store
+**/__MACOSX/
+
+# Temporary files
+**/*.tmp
+**/*.swp
+**/*.log
+**/*.out
+**/*.bak
+
+# Files containing '_orig' in the name
+**/*_orig*
+
+# Custom files and folders to exclude
 data_reduce/
 data/data_main_orig.rds
 data/data_owners_orig.rds
 data/ll_df.rds
 data/measures.xlsx
-.DS_Store
-.DS_Store
+**/.DS_Store
+**/*.DS_Store*
+data/WMSUF_Berlin_aufbereitet.csv
+data/PLZ_gentriindex.dta
