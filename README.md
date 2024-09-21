@@ -31,11 +31,13 @@ The file `source_results/functions.R` contains all the helper functions used in 
 
 We omit two tables and figures from the replication archive. Both are used for auxiliary evidence -- all main results can be replicated using the code and data provided.
 
-- **Figure 18** This figure was produced in ArcMap, i.e. there is no code to produce it.
+- **Figure 1** This figure was produced in ArcMap, i.e. there is no code to produce it.
 
 - **Table A.8** (restricting comparisons to physically close observations): this table is a robustness check that uses data on the exact location (based on addresses) of respondents. We cannot share the longitude/latitude of responses, therefore we do not include data and code to create this table.
 
 - **Figure A.8** (histogram of apartment construction years): this figure uses data on all apartments that we fielded the survey to, which in turn is based on proprietary real estate ad data. Since we cannot share this data, we do not include this figure in the replication archive.
+
+- Tables A.1, A.2 and A.5: These tables were not produced with code
 
 ## 4. Data Sources
 
