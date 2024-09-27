@@ -32,7 +32,6 @@
 # Packages
 **/.RData
 **/.RDataTmp
-**/*.RDS
 **/*.Rproj
 **/.DS_Store
 **/__MACOSX/
