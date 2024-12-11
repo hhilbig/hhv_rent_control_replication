@@ -1,0 +1,25 @@
+- The output for figure 2/A5 is different from the version of the manuscript I have (see attached the plot I got)
+    - I checked this and I also get the same plot as you are getting. In our version of the manuscript, the plot looks exactly like the one produced by the code. Potentially, you have an older version of the paper? I would propose we just make sure the plots in the published version of the paper are exactly the ones produced by the code. 
+
+- I was unable to replicate figures 3 and A20 because the data/Measures.xlsx file was not included in the dataverse.
+    - Fixed this, the file is actually not required for this analysis.
+
+- For figure A1, I had an error on line 49 (Error in `group_by()`: ✖ Column `party_id` is not found.)
+    - Fixed this 
+
+- For figure A7, the source_results/functions.R script was not called
+    - Fixed, the script is now called.
+
+- I understand that figure A8 and table A8 rely on confidential data, but we require authors to either submit a log file for these figures. Another option would be for me to confidentially access the data and code only for replication purposes.
+
+- For figures A10, A11, A12, I get an error in the pf function: Error in x_axis_90deg() : could not find function "x_axis_90deg" (in addition, the source_results/functions.R file was not called)
+    - Fixed this, also the script is now called.
+
+- When I generate figures A13 and A15, they seem to be flipped in the manuscript.
+    - I added some comments to the code to make it clear which figure is which.
+
+- For figure A22, the data/measures.xlsx was not included in the dataverse materials.
+    - Removed this, the file is not required for this analysis.
+
+- For figures A24, A25, and A26, the data files called in the r file were not included in the dataverse.
+    - Files are now included.

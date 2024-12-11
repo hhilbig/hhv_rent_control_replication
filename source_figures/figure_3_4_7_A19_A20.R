@@ -42,8 +42,7 @@ res_rent_not_imputed <- res %>%
 # Set up plot parameters
 pd <- position_dodge(0.4)
 
-# Load measures and define NIMBY index
-measures <- read_excel("data/Measures.xlsx")
+# Def outcomes
 o_nimby <- c("y_immig_kiez", "y_constr_kiez", "index_nimbyism")
 
 # Figure 3: NIMBY index

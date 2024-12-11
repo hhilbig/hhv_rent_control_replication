@@ -10,7 +10,7 @@ civ <- read_excel("data/civey_survey.xlsx", skip = 9) %>%
     ) %>%
     select(id, support_rent_control, zip, weight, party_id) %>%
     mutate(
-        party_id = recode(party_id,
+        party_id = dplyr::recode(party_id,
             `Grüne` = "Greens",
             `Linke` = "Left party",
             `Sonstige` = "Other",
@@ -35,6 +35,19 @@ calculate_support <- function(data, filter_condition = TRUE) {
         )
 }
 
+# Same function but group by party_id
+calculate_support_party <- function(data, filter_condition = TRUE) {
+    data %>%
+        filter({{ filter_condition }}) %>%
+        group_by(party_id) %>%
+        summarise(
+            support_rent_control = weighted.mean(support_rent_control_bin, weight),
+            sd = sqrt(wtd.var(support_rent_control_bin, weight)),
+            n = n(),
+            se_mean = sd / sqrt(n)
+        )
+}
+
 b_support <- calculate_support(civ, berlin == 1) %>% mutate(party_id = "Berlin only")
 overall_support <- calculate_support(civ) %>% mutate(party_id = "Full sample")
 
@@ -45,8 +58,10 @@ plot_df <- bind_rows(b_support, overall_support) %>%
         conf.high = support_rent_control + 1.96 * se_mean
     )
 
+civ %>% glimpse()
+
 # Calculate support by party in Berlin
-b_support_party <- calculate_support(civ %>% filter(berlin == 1), TRUE) %>%
+b_support_party <- calculate_support_party(civ %>% filter(berlin == 1), TRUE) %>%
     group_by(party_id) %>%
     mutate(
         conf.low = support_rent_control - 1.96 * se_mean,
@@ -57,10 +72,17 @@ b_support_party <- calculate_support(civ %>% filter(berlin == 1), TRUE) %>%
 # Combine data for final plot
 final_plot_data <- bind_rows(b_support_party, plot_df) %>%
     mutate(
-        group = if_else(str_detect(party_id, "Full|Berlin"), "Overall", "By party (Berlin only)"),
-        party_id = fct_reorder(party_id, support_rent_control),
-        group = fct_rev(as.factor(group))
-    )
+        support_rent_control = as.numeric(support_rent_control),
+        party_id = as.factor(party_id),
+        group = if_else(str_detect(
+            party_id,
+            "Full|Berlin"
+        ), "Overall", "By party (Berlin only)"),
+        party_id = fct_reorder(party_id, support_rent_control)
+    ) %>%
+    mutate(party_id = factor(party_id, levels = c("Full sample", "Berlin only", "FDP", "AfD", "CDU/CSU", "Do not vote", "Greens", "SPD", "Other", "Left party"))) %>%
+    mutate(group = fct_rev(as.factor(group)))
+
 
 # Create final plot
 p2 <- ggplot(final_plot_data, aes(party_id, support_rent_control * 100)) +

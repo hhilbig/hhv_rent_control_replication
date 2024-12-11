@@ -4,6 +4,8 @@ rm(list = ls())
 # Load required packages
 pacman::p_load(readr, tidyverse, tidyr, ggplot2, readxl)
 
+source("source_results/functions.R")
+
 # Load and prepare data
 df <- read_rds("data/data_main.rds") %>%
   filter(!is.na(treated_rd_relative))
@@ -79,7 +81,10 @@ pf <- function(o) {
       y = outcome_labs[outcome_list == o] %>% add_linebreak(8)
     ) +
     scale_x_continuous(breaks = 2010:2017) +
-    x_axis_90deg() +
+    theme(axis.text.x = element_text(
+      angle = 90, vjust = 0.5,
+      hjust = 1
+    )) +
     theme(legend.position = "right") +
     scale_size_continuous(
       trans = "log",

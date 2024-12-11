@@ -88,12 +88,12 @@ outcome_list <- paste0(outcome_list, "_resid")
 o_nimby <- paste0(o_nimby, "_resid")
 outcome_labs <- paste0(outcome_labs, " (residualized)")
 
-# Generate plots for Figures A13, A14, A15
+# Generate plots for Figures A.15, A.14, A.13
 p1 <- pf(o = o_nimby[1])
 p2 <- pf(o = o_nimby[2])
 p3 <- pf(o = o_nimby[3])
 
 # Print plots
-print(p1)
-print(p2)
-print(p3)
+print(p1) # This is figure A.15
+print(p2) # This is figure A.14
+print(p3) # This is figure A.13

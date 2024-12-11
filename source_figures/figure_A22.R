@@ -10,10 +10,6 @@ source("source_results/functions.R")
 df <- read_rds("data/data_main.rds") %>%
   filter(!is.na(treated_rd_relative))
 
-
-# Load measures
-measures <- read_xlsx("data/measures.xlsx")
-
 # Define outcomes
 outcome_list <- c("y_immig_kiez", "y_constr_kiez")
 outcome_labs <- c("Support local-level immigration", "Support local-level construction")

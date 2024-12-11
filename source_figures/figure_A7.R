@@ -5,6 +5,8 @@ pacman::p_load(
   ggplot2, readxl, rdrobust, fastDummies, pbapply
 )
 
+source("source_results/functions.R")
+
 # Get data for RD
 df_rd <- read_rds("data/data_main.rds") %>%
   filter(!is.na(treated_rd_relative))
