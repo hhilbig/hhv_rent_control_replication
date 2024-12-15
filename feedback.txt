@@ -11,6 +11,7 @@
     - Fixed, the script is now called.
 
 - I understand that figure A8 and table A8 rely on confidential data, but we require authors to either submit a log file for these figures. Another option would be for me to confidentially access the data and code only for replication purposes.
+    - Sending this directly to replicate figure A8 and table A8.
 
 - For figures A10, A11, A12, I get an error in the pf function: Error in x_axis_90deg() : could not find function "x_axis_90deg" (in addition, the source_results/functions.R file was not called)
     - Fixed this, also the script is now called.
