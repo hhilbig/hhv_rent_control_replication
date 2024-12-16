@@ -1,6 +1,6 @@
 # Replication Data & Code for "Does Rent Control Turn Tenants Into NIMBYs?"
 
-Sep 21, 2024
+Dec 16, 2024
 
 **Authors:** Hanno Hilbig, Robert Vief, Anselm Hager
 
@@ -15,11 +15,14 @@ The replication code assumes data files are located in the `data/...` folder. Th
 #### 2.1. Data
 
 - **data_main.rds:** Main data file (survey responses from tenants)
-- **data_main_owners.rds:** Survey responses from owners, used for auxiliary analysis
+- **data_owners.rds:** Survey responses from owners, used for auxiliary analysis
 - **covar_labels.xlsx:** Labels for the covariates
 - **nexis_date_df.rds:** Nexis newspaper coverage data
 - **rentalunits_renters_new.xlsx:** Rental market data across cities
 - **civey_survey.xlsx:** Survey data for figure A.1
+- **data_fig24.rds:** Data for figure A.24
+- **data_fig25.rds:** Data for figure A.25
+- **data_fig26.rds:** Data for figure A.26
 
 #### 2.2. Code
 
